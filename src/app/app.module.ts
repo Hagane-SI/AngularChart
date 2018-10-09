@@ -10,6 +10,8 @@ import { InfoComponent } from './info/info.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { TableComponent } from './table/table.component';
 
+import { DataService } from './services/data.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,7 @@ import { TableComponent } from './table/table.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -9,6 +9,8 @@ import { Chart } from 'chart.js';
 export class GraphComponent implements OnInit {
 
   chart;
+  dummy= [80, 72, 54, 50, 48, 27, 19, 11, 4, 3];
+  data;
   ngOnInit() {
     this.drawGraph();
   }
@@ -24,12 +26,13 @@ export class GraphComponent implements OnInit {
   }
 
   getChartType() {
-    return  'bar';
+    return  'line';
   }
 
   chartData() {
     return {
-    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+    labels: ["00:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00", "08:00", "09:00", "10:00", "11:00",
+    "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"],
     datasets: [{
       label: 'Escaneos por Artículo',
       backgroundColor: [
@@ -57,7 +60,7 @@ export class GraphComponent implements OnInit {
             'rgba(181, 181, 181, 1)'
         ],
         borderWidth: 1,
-      data: [80, 72, 54, 50, 48, 27, 19, 11, 4, 3],
+      data: this.dummy,
     }]
   }
   }

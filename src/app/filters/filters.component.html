@@ -1,3 +1,11 @@
-<p>
-  filters works!
-</p>
+<div class="form-group center col-6 col-md-12">
+    <button class="btn actions" (click)="sendParamsToChart()">Aceptar</button>
+</div>
+<div>
+    <p>Filter type: {{filterType}}</p>
+    <p>Frequency type: {{frequencyType}}</p>
+    <p>Service Data: {{serviceData | json}}</p>
+    <p>Verifiers: {{verifiers}}</p>
+    <p>selected Date: {{selectedDate}}</p>
+    <p>Selected Range: {{selectedRangeDate}}</p>
+</div>
